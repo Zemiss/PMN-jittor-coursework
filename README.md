@@ -9,8 +9,11 @@
 ## </font> <font color="#ce0c0c">环境配置</font> 
 
 Python 版本 >= 3.7，Jittor 版本 >= 1.3
+
 所需工具：opencv-python、rawpy、exifread、h5py、scipy、tqdm、PyYAML、matplotlib、scikit-image
+
 平台：Ubuntu 24.04、cuda-12.0
+
 可以在CPU上运行，但建议在GPU上运行。
 
 ## </font> <font color="#ce0c0c">数据准备</font>
@@ -159,8 +162,9 @@ python3 trainer_SID.py -f runfiles/Ours.yml --mode evaltest --save_plot False
 
 ### </font> <font color="#ce0c0c">评估指标</font> 
 
-*   **PSNR (峰值信噪比)**: 衡量图像重建质量的指标，值越高表示图像质量越好。常用于图像降噪、超分辨率等任务评估。公式：$PSNR = 10 \log_{10}(MAX^2 / MSE)$
-*   **SSIM (结构相似性)**: 衡量两幅图像结构相似性的指标，值越高表示图像相似度越高。相比 PSNR，SSIM 更符合人眼感知。范围：[-1, 1]，通常取 [0, 1]。
+*   **PSNR (峰值信噪比)**: 衡量图像重建质量的指标，值越高表示图像质量越好。
+
+*   **SSIM (结构相似性)**: 衡量两幅图像结构相似性的指标，值越高表示图像相似度越高。更符合人眼感知。
 
 
 | Dataset | Ratio | Index | P-G   | ELD   | SFRN  | Paired      | pytorch  |     jittor600轮     |    jittor1800轮    |
